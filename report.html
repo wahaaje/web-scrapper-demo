@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Extraction report | Web Scraper</title>
+  <style>
+    :root{--ink:#102d38;--muted:#4b6771;--paper:#f1f5f4;--line:#d8e3e3;--accent:#087d72}
+    *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif}
+    .shell{max-width:1120px;margin:auto;padding:38px 32px 60px}.brand{display:flex;align-items:center;gap:12px;font-weight:650;letter-spacing:.03em}
+    .mark{background:var(--ink);color:#86ead0;padding:3px 11px;border-radius:8px;font:700 20px/1.7 monospace}.tag{margin-left:auto;font:600 11px/1.2 monospace;letter-spacing:.12em;border:1px solid #bfd1d2;padding:8px 12px;border-radius:30px}
+    .hero{padding:48px 0 27px}.eyebrow{text-transform:uppercase;letter-spacing:.18em;font-size:11px;font-weight:700;color:var(--accent)}h1{font-size:clamp(32px,4vw,52px);line-height:1.12;letter-spacing:-.04em;margin:12px 0 16px}h1 span{color:var(--accent)}.hero p{color:var(--muted);margin:0;max-width:700px}
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:14px;background:white;overflow:hidden;margin:8px 0 24px}.stat{padding:22px 26px;border-right:1px solid var(--line)}.stat:last-child{border:0}.stat strong{display:block;font-size:34px;line-height:1.2;letter-spacing:-.04em}.stat span{font-size:12px;color:var(--muted)}
+    .run{display:flex;flex-wrap:wrap;gap:10px 28px;color:var(--muted);font-size:12px;margin:12px 0 32px}.toolbar{display:flex;gap:12px;align-items:center;margin:0 0 20px}.toolbar input{min-width:0;flex:1}input,select{background:white;border:1px solid #b9cbcf;border-radius:8px;padding:12px;color:var(--ink);font:inherit}input:focus,select:focus{outline:3px solid #7bdfc3;outline-offset:2px}.toolbar label{font-weight:600;font-size:13px}
+    .record{background:#fff;border:1px solid var(--line);border-radius:14px;margin:0 0 18px;padding:25px 28px}.record-head{display:flex;align-items:center;gap:14px;justify-content:space-between}h2{font-size:20px;letter-spacing:-.02em;margin:0}.pill{padding:4px 12px;border-radius:25px;font-size:12px;font-weight:650}.ok{background:#dcf5e9;color:#126549}.partial{background:#fff1ce;color:#815a13}.error{background:#ffe1df;color:#8f2929}dl{display:grid;grid-template-columns:repeat(3,1fr);gap:18px 30px;margin:23px 0}dt{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}dd{margin:3px 0 0;overflow-wrap:anywhere}details{border-top:1px solid var(--line);padding-top:15px}summary{cursor:pointer;font-size:13px;font-weight:600;color:var(--accent)}.table-scroll{overflow-x:auto}table{border-collapse:collapse;width:100%;margin-top:12px;font-size:13px}td,th{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top;overflow-wrap:anywhere}th{font-weight:600;background:#f4f8f7}footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 20px;margin-top:18px;padding-top:14px;border-top:1px solid var(--line);color:var(--muted);font-size:10px;overflow-wrap:anywhere}footer span{max-width:100%}.notice,.issues{padding:12px 30px;background:#fff3d9;border-radius:8px;font-size:13px}#empty{text-align:center;padding:40px;color:var(--muted)}.end{color:var(--muted);font-size:11px;margin-top:28px}[hidden]{display:none!important}
+    @media(max-width:680px){.shell{padding:24px 18px}.hero{padding-top:34px}.stats{grid-template-columns:repeat(2,1fr)}.stat{border-bottom:1px solid var(--line)}.stat:nth-child(2){border-right:0}.stat:nth-child(3){border-bottom:0}.toolbar{flex-wrap:wrap}.toolbar label{width:100%}dl{grid-template-columns:1fr 1fr}.record{padding:21px 19px}.run{margin-bottom:24px}}
+    @media print{.toolbar,.end{display:none}.record{break-inside:avoid}.shell{padding:0}.hero{padding-top:24px}}
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header class="brand"><span class="mark" aria-hidden="true">/w</span> WEB SCRAPER <span class="tag">$mode RUN</span></header>
+    <section class="hero"><div class="eyebrow">Extraction / validation / delivery</div><h1>Web data.<br><span>Ready to review.</span></h1><p>$note</p></section>
+    <section class="stats" aria-label="Run statistics"><div class="stat"><strong>$count</strong><span>Records captured</span></div><div class="stat"><strong>$ok</strong><span>Required fields complete</span></div><div class="stat"><strong>$partial</strong><span>Needs review</span></div><div class="stat"><strong>$errors</strong><span>Page errors</span></div></section>
+    <div class="run"><span>$pages listing pages</span><span>$reused reused records</span><span>Stopped: $stop</span><span>Finished: $date</span></div>
+    $warnings
+    <div class="toolbar"><label for="query">Find a record</label><input id="query" type="search" placeholder="Search names, fields or sources…"><select id="status" aria-label="Filter by extraction status"><option value="all">All statuses</option><option value="ok">Complete</option><option value="partial">Needs review</option><option value="error">Page errors</option></select></div>
+    <div id="results">$records</div><p id="empty" role="status" hidden>No records match these filters.</p>
+    <p class="end">Self-contained report · no external scripts, fonts or analytics · complete data in records.json</p>
+  </main>
+  <script>
+    const query = document.getElementById('query');
+    const status = document.getElementById('status');
+    const cards = Array.from(document.querySelectorAll('.record'));
+    function filterRecords() {
+      const term = query.value.trim().toLowerCase();
+      let visible = 0;
+      cards.forEach(card => {
+        const matches = (status.value === 'all' || card.dataset.status === status.value)
+          && card.textContent.toLowerCase().includes(term);
+        card.hidden = !matches;
+        if (matches) visible++;
+      });
+      document.getElementById('empty').hidden = visible !== 0;
+    }
+    query.addEventListener('input', filterRecords);
+    status.addEventListener('change', filterRecords);
+  </script>
+</body>
+</html>

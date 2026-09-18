@@ -1,0 +1,96 @@
+[
+  {
+    "requested_url": "https://demo.test/records/atlas.html",
+    "source_url": "https://demo.test/records/atlas.html",
+    "scraped_at": "2026-09-18T12:53:02+00:00",
+    "fields": {
+      "name": "Atlas Studio",
+      "phone": "+1 202-555-0101",
+      "email": "hello@atlas.test",
+      "address": "12 Sample Lane, Demo City",
+      "category": "Design",
+      "notes": "Fictional listing for the local demo."
+    },
+    "blocks": [
+      {
+        "label": "Service",
+        "value": "Brand identity"
+      },
+      {
+        "label": "Service",
+        "value": "Editorial design"
+      },
+      {
+        "label": "Service_2",
+        "value": "A literal label preserved without renaming"
+      },
+      {
+        "label": "Hours",
+        "value": "Monday–Friday · 09:00–17:00"
+      }
+    ],
+    "status": "ok",
+    "attempts": 1,
+    "issues": []
+  },
+  {
+    "requested_url": "https://demo.test/records/cedar.html",
+    "source_url": "https://demo.test/records/cedar.html",
+    "scraped_at": "2026-09-18T12:53:02+00:00",
+    "fields": {
+      "name": "Cedar Books",
+      "phone": "+1 202-555-0102",
+      "email": "team@cedar.test",
+      "address": "24 Example Road, Demo City",
+      "category": "Retail",
+      "notes": "Independent bookshop · fictional data."
+    },
+    "blocks": [
+      {
+        "label": "Specialty",
+        "value": "Art & architecture"
+      },
+      {
+        "label": "Specialty",
+        "value": "Travel writing"
+      },
+      {
+        "label": "Hours",
+        "value": "Tuesday–Saturday · 10:00–18:00"
+      }
+    ],
+    "status": "ok",
+    "attempts": 1,
+    "issues": []
+  },
+  {
+    "requested_url": "https://demo.test/records/northstar.html",
+    "source_url": "https://demo.test/records/northstar.html",
+    "scraped_at": "2026-09-18T12:53:02+00:00",
+    "fields": {
+      "name": "Northstar Workshop",
+      "phone": "+1 202-555-0103",
+      "email": "",
+      "address": "8 Fixture Avenue, Demo City",
+      "category": "Services",
+      "notes": "Email intentionally absent; it is an optional field."
+    },
+    "blocks": [
+      {
+        "label": "Service",
+        "value": "Furniture restoration"
+      },
+      {
+        "label": "Area",
+        "value": "Demo City"
+      },
+      {
+        "label": "Hours",
+        "value": "By appointment"
+      }
+    ],
+    "status": "ok",
+    "attempts": 1,
+    "issues": []
+  }
+]

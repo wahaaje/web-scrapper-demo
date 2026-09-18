@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+output/
+*.log
+*.xlsx
+*.csv
+checkpoint.json
+config.local.json
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

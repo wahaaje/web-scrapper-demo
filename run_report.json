@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "mode": "demo",
+  "started_at": "2026-09-18T12:53:02+00:00",
+  "finished_at": "2026-09-18T12:53:02+00:00",
+  "listing_url": "https://demo.test/directory/index.html",
+  "record_limit": 15,
+  "listing_pages": 2,
+  "page_attempts": 5,
+  "records": 3,
+  "reused_records": 0,
+  "attempted_records": 3,
+  "counts": {
+    "ok": 3,
+    "partial": 0,
+    "error": 0
+  },
+  "stop_reason": "end_of_listing",
+  "warnings": []
+}

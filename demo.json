@@ -1,0 +1,23 @@
+{
+  "listing_url": "https://demo.test/directory/index.html",
+  "link_selector": "a.record-link",
+  "next_selector": "a.next-page",
+  "listing_ready": ".directory",
+  "detail_ready": ".main-content",
+  "fields": {
+    "name": "h1.record-name",
+    "phone": ".phone-number",
+    "email": ".email-link",
+    "address": ".address-block",
+    "category": ".category-tag",
+    "notes": ".notes-section"
+  },
+  "required_fields": ["name", "category"],
+  "block_selector": ".data-block",
+  "block_label": ".block-label",
+  "block_value": ".block-value",
+  "request_delay": 1.5,
+  "timeout": 20,
+  "retries": 1,
+  "max_listing_pages": 10
+}

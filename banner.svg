@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="440" viewBox="0 0 1280 440" role="img" aria-labelledby="title desc">
+  <title id="title">Web Scraper — directory data automation</title>
+  <desc id="desc">Python and Selenium project with configurable extraction, recoverable runs and structured exports.</desc>
+  <defs><pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#27454e" stroke-width=".6"/></pattern></defs>
+  <rect width="1280" height="440" rx="24" fill="#102d38"/>
+  <rect x="750" y="1" width="529" height="438" rx="24" fill="url(#grid)"/>
+  <rect x="58" y="50" width="36" height="4" rx="2" fill="#86ead0"/>
+  <text x="58" y="89" font-family="Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="3" fill="#86ead0">WEB AUTOMATION / DATA ENGINEERING</text>
+  <text x="53" y="173" font-family="Arial,sans-serif" font-size="70" font-weight="700" letter-spacing="-3" fill="#ffffff">Web Scraper</text>
+  <text x="58" y="223" font-family="Arial,sans-serif" font-size="26" fill="#cbdedf">From directory pages</text>
+  <text x="58" y="260" font-family="Arial,sans-serif" font-size="26" fill="#cbdedf">to data you can inspect.</text>
+  <g font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#dbeae9">
+    <rect x="58" y="304" width="93" height="33" rx="16" fill="#25454e"/><text x="78" y="326">PYTHON</text>
+    <rect x="162" y="304" width="111" height="33" rx="16" fill="#25454e"/><text x="179" y="326">SELENIUM</text>
+    <rect x="284" y="304" width="152" height="33" rx="16" fill="#25454e"/><text x="305" y="326">JSON + EXCEL</text>
+  </g>
+  <text x="58" y="391" font-family="Arial,sans-serif" font-size="13" fill="#91b0b7">RAJA WAHAJ   /   WAHAAJE</text>
+  <g transform="translate(752 79)">
+    <rect width="455" height="278" rx="16" fill="#f1f5f4"/>
+    <rect x="1" y="1" width="453" height="39" rx="15" fill="#e2eae8"/>
+    <circle cx="22" cy="20" r="4" fill="#98b3b3"/><circle cx="38" cy="20" r="4" fill="#98b3b3"/><circle cx="54" cy="20" r="4" fill="#98b3b3"/>
+    <text x="84" y="24" font-family="monospace" font-size="11" fill="#395c64">extract / validate / export</text>
+    <text x="27" y="78" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#102d38">A RUN YOU CAN REVIEW</text>
+    <g font-family="Arial,sans-serif" font-size="12" fill="#43636a">
+      <text x="27" y="118">Configured selectors</text><text x="368" y="118" fill="#087d72">READY</text>
+      <path d="M27 133H426" stroke="#d3dfdc"/>
+      <text x="27" y="160">Recoverable progress</text><text x="369" y="160" fill="#087d72">SAVED</text>
+      <path d="M27 175H426" stroke="#d3dfdc"/>
+      <text x="27" y="202">Complete data blocks</text><text x="360" y="202" fill="#087d72">RETAINED</text>
+    </g>
+    <rect x="27" y="229" width="399" height="27" rx="6" fill="#d9efe6"/>
+    <text x="42" y="247" font-family="monospace" font-size="11" fill="#126549">python scraper.py --demo</text>
+  </g>
+</svg>
